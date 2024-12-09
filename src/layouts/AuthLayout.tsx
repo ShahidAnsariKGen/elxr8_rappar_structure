@@ -13,6 +13,7 @@ export default function AuthLayout({ children, image }: AuthLayoutProps) {
   return (
     <Row style={{ height: '100vh' }}>
       <Image
+        alt="elr8_logo"
         style={{
           position: 'fixed',
           left: 27,

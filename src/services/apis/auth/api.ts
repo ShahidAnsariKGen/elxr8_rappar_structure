@@ -1,8 +1,8 @@
-import { axiosInstance } from '@/services/constants';
 import { UserLoginPayload, UserLoginResponse } from './types';
-import { API_URLS } from '@/services/apiURLs';
+import API_URLS from '@/services/apiURLs';
+import axiosInstance from '@/services/constants';
 
-export const userLogin = async (data: UserLoginPayload) => {
+const userLogin = async (data: UserLoginPayload) => {
   const response: UserLoginResponse = (
     await axiosInstance.get(API_URLS.userLogin, {
       data,
@@ -10,3 +10,5 @@ export const userLogin = async (data: UserLoginPayload) => {
   ).data;
   return response;
 };
+
+export default userLogin;

@@ -1,11 +1,11 @@
 import { Flex, Form, Typography } from 'antd/lib';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import AuthFormTitle from '../../components/forms/AuthFormTitle';
 import LoginText from '../../components/forms/LoginText';
 import PasswordInput from '@/components/ui/PasswordInput';
 import PrimaryButton from '@/components/ui/PrimaryButton';
 import TextInput from '@/components/ui/TextInput';
-import Link from 'next/link';
 
 const { Text } = Typography;
 

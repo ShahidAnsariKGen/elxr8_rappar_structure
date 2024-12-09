@@ -1,3 +1,5 @@
 import axios from 'axios';
 
-export const axiosInstance = axios.create({ baseURL: '' });
+const axiosInstance = axios.create({ baseURL: '' });
+
+export default axiosInstance;

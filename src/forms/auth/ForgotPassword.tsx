@@ -5,8 +5,6 @@ import LoginText from '@/components/forms/LoginText';
 import PrimaryButton from '@/components/ui/PrimaryButton';
 import TextInput from '@/components/ui/TextInput';
 
-const { Text } = Typography;
-
 export default function ForgotPassword() {
   const [loginFormData, setLoginFormData] = useState({
     email: '',
