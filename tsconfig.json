@@ -13,8 +13,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".", // Base directory for resolving non-relative module names
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"] // Maps @/ to the src/ folder
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
