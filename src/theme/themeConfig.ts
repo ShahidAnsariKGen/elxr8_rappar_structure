@@ -1,5 +1,5 @@
 // theme/themeConfig.ts
-import type { ThemeConfig } from 'antd';
+import type { ThemeConfig } from 'antd/lib';
 
 const theme: ThemeConfig = {
   token: {

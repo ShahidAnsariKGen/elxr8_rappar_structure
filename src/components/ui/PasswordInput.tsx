@@ -20,7 +20,12 @@ export default function PasswordInput({
   onChange,
 }: PasswordInputProps) {
   return (
-    <Form.Item label={label} name={name} rules={rules}>
+    <Form.Item
+      label={label}
+      name={name}
+      rules={rules}
+      style={{ marginBottom: '0' }}
+    >
       <Input.Password
         name={name}
         value={value}

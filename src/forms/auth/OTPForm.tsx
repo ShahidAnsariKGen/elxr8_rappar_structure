@@ -1,30 +1,32 @@
-import { Flex, Form, Typography } from 'antd/lib';
-import React, { useState } from 'react';
 import AuthFormTitle from '@/components/forms/AuthFormTitle';
-import LoginText from '@/components/forms/LoginText';
 import PrimaryButton from '@/components/ui/PrimaryButton';
 import TextInput from '@/components/ui/TextInput';
+import { Form } from 'antd/lib';
+import { Flex } from 'antd/lib';
+import React from 'react';
 
-interface ForgotPasswordProps {
-  forgotPasswordFormData: {
-    email: string;
+interface OTPFormProps {
+  otpFormData: {
+    otp: string;
   };
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  email: string;
   handleSubmit: () => void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isDisabled: boolean;
 }
 
-export default function ForgotPassword({
-  forgotPasswordFormData,
-  handleChange,
+export default function OTPForm({
+  otpFormData,
+  email,
   handleSubmit,
+  handleChange,
   isDisabled,
-}: ForgotPasswordProps) {
+}: OTPFormProps) {
   return (
     <>
       <AuthFormTitle
-        title="Forgot Password?"
-        subTitle="Enter the Email ID associated with your account"
+        title="Enter OTP"
+        subTitle={`OTP sent to ${email} to set New password.`}
       />
       <Form
         name="login"
@@ -35,14 +37,14 @@ export default function ForgotPassword({
         <Flex vertical gap={72}>
           <Flex vertical gap={32}>
             <TextInput
-              label="Email"
-              name="email"
+              label="OTP"
+              name="otp"
               rules={[
-                { message: 'Please enter your email!' },
-                { type: 'email', message: 'Please enter a valid email!' },
+                { message: 'Please enter your otp!' },
+                { type: 'string', message: 'Please enter a 5 digit number!' },
               ]}
-              placeholder="Enter Your Email"
-              value={forgotPasswordFormData.email}
+              placeholder="Enter Your OTP"
+              value={otpFormData.otp}
               onChange={handleChange}
             />
           </Flex>
@@ -57,7 +59,6 @@ export default function ForgotPassword({
           </Form.Item>
         </Flex>
       </Form>
-      <LoginText />
     </>
   );
 }

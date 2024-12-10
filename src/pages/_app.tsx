@@ -1,13 +1,13 @@
 import '@/styles/globals.css';
-import { ConfigProvider } from 'antd/lib';
-import type { AppProps } from 'next/app';
-import { useState } from 'react';
 import {
   HydrationBoundary,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { ConfigProvider } from 'antd/lib';
+import type { AppProps } from 'next/app';
+import { useState } from 'react';
 
 import theme from '@/theme/themeConfig';
 

@@ -27,7 +27,7 @@ export default function TextInput({
       style={{ marginBottom: '0' }}
     >
       <Input
-        name="email"
+        name={name}
         value={value}
         onChange={onChange}
         style={{ padding: '12px 20px' }}

@@ -5,7 +5,7 @@ import React from 'react';
 
 function MyDocument() {
   return (
-    <Html lang="en">
+    <Html>
       <Head />
       <body>
         <Main />
